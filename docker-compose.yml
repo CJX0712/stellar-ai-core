@@ -1,0 +1,22 @@
+services:
+  stellarai:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      STELLAR_LLM_PROVIDER: "${STELLAR_LLM_PROVIDER:-mock}"
+      STELLAR_EMBEDDER_PROVIDER: "${STELLAR_EMBEDDER_PROVIDER:-mock}"
+      STELLAR_VECTOR_STORE: "${STELLAR_VECTOR_STORE:-numpy}"
+      STELLAR_EMBEDDER_DIM: "${STELLAR_EMBEDDER_DIM:-64}"
+    restart: unless-stopped
+
+  # 可选：本地推理侧车（取消注释启用 vLLM 并提供 OpenAI 兼容端点）
+  # vllm:
+  #   image: vllm/vllm-openai:latest
+  #   command: ["--model", "Qwen/Qwen2.5-0.5B-Instruct", "--port", "8000"]
+  #   ports:
+  #     - "8001:8000"
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 8G
