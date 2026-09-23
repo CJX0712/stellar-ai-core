@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir uv
 
 WORKDIR /app
 
-COPY pyproject.toml ./
+COPY pyproject.toml README.md ./
 COPY src ./src
 
 # 注: `uv venv` 默认不安装 pip, 因此用 `uv pip install --python` 直接装入该 venv。
