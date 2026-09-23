@@ -1,5 +1,12 @@
 # StellarAI
 
+<p align="center">
+  <a href="https://github.com/CJX0712/stellar-ai-core/actions/workflows/ci.yml"><img src="https://github.com/CJX0712/stellar-ai-core/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
+  <a href="https://github.com/CJX0712/stellar-ai-core/releases"><img src="https://img.shields.io/github/v/release/CJX0712/stellar-ai-core?sort=semver" alt="release"></a>
+  <a href="https://github.com/CJX0712/stellar-ai-core/blob/main/LICENSE"><img src="https://img.shields.io/github/license/CJX0712/stellar-ai-core" alt="license"></a>
+  <img src="https://img.shields.io/badge/author-%E6%99%A8%E6%98%9F-1f6feb" alt="author">
+</p>
+
 > 模块化、可编排、接口驱动的端到端 AI 系统 —— 复用业界领先开源成果，避免从零自研。
 
 **作者：晨星**
