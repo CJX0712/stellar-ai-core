@@ -126,6 +126,21 @@ def demo() -> None:
     console.print("[green]端到端链路验证通过（Mock 模式，无需 GPU/网络）。[/green]")
 
 
+@app.command()
+def bench() -> None:
+    """运行性能基准与正确性不变量校验（零 GPU / 零网络）。"""
+    import sys
+    from pathlib import Path
+
+    # 把仓库根加入 sys.path，使 benchmarks 包可被导入（项目以 src 布局安装，benchmarks 非安装包）
+    repo_root = Path(__file__).resolve().parents[3]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+    from benchmarks.run_bench import main as bench_main
+
+    raise typer.Exit(code=bench_main())
+
+
 def main() -> None:
     app()
 

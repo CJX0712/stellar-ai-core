@@ -27,3 +27,6 @@ jobs:
 
       - name: Test
         run: uv run pytest -q
+
+      - name: Benchmark (invariants gate)
+        run: uv run python benchmarks/run_bench.py

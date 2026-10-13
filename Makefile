@@ -27,6 +27,9 @@ run:
 demo:
 	uv run stellarai demo
 
+bench:
+	uv run stellarai bench
+
 docker-build:
 	docker build -t stellarai:0.1.0 .
 

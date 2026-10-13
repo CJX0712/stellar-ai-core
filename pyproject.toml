@@ -58,6 +58,7 @@ target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+per-file-ignores = { "benchmarks/**" = ["E501"] }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

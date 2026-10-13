@@ -71,14 +71,26 @@ stellarai query "谁打造了 StellarAI？"
 ## 测试
 
 ```bash
-pytest
+uv run pytest -q          # 22 项，全绿（零 GPU/网络）
+uv run stellarai demo     # 端到端 RAG + Agent 验证
 ```
+
+## 基准与正确性验证
+
+```bash
+uv run stellarai bench    # 性能基准 + 不变量门禁（零 GPU/网络）
+```
+
+- 性能数据与方法学：[BENCHMARKS.md](./BENCHMARKS.md)
+- 交付状态与证据对照：[VERIFICATION.md](./VERIFICATION.md)
 
 ## 文档
 
 - [ARCHITECTURE.md](./ARCHITECTURE.md) 系统架构
 - [DEPLOYMENT.md](./DEPLOYMENT.md) 部署指南
 - [USAGE.md](./USAGE.md) 使用指南
+- [BENCHMARKS.md](./BENCHMARKS.md) 性能基准与正确性验证
+- [VERIFICATION.md](./VERIFICATION.md) 交付状态与验证证据
 
 ## 许可
 
