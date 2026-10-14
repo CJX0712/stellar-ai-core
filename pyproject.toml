@@ -25,13 +25,13 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-llm-vllm = ["vllm>=0.29,<0.30; sys_platform != 'win32'"]
+llm-vllm = ["vllm>=0.29,<0.32; sys_platform != 'win32'"]
 llm-llamacpp = ["llama-cpp-python>=0.3,<0.4"]
 embeddings = ["sentence-transformers>=3,<7"]
 vector = ["chromadb>=0.5,<2"]
 agent = ["langgraph>=0.1,<2"]
 all = [
-    "vllm>=0.29,<0.30; sys_platform != 'win32'",
+    "vllm>=0.29,<0.32; sys_platform != 'win32'",
     "llama-cpp-python>=0.3,<0.4",
     "sentence-transformers>=3,<7",
     "chromadb>=0.5,<2",
